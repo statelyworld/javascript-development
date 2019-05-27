@@ -1,0 +1,21 @@
+/*
+	Write a JavaScript program to display the current day and time in the following format.	
+	Sample Output : Today is :Monday 
+	Current time is: 12:18:39 PM
+*/
+
+var date=new Date();
+
+var dayName=["Sunday","Monday","Tuesday","Wednesday ","Thursday","Friday","Saturday"];
+
+var day=date.getDay();
+
+console.log("Today is :"+ dayName[day]);
+
+var hours=date.getHours();
+var min=date.getMinutes();
+var sec=date.getSeconds();
+
+var clock_format= (hours>=12)?"PM":"AM";
+
+console.log("Current time is: "+hours+":"+min+":"+sec + " "+clock_format);
