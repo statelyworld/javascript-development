@@ -1,0 +1,113 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title></title>
+	<style>
+		html {
+	min-height: 100%;
+	font-family: 'Nunito', sans-serif;
+	-webkit-font-smoothing: antialiased;
+}
+
+body {
+	background-color: black;
+	line-height: 1.5;
+}
+
+h1 {
+	font-weight: 200;
+	font-size: 3rem;
+	color: white;
+	text-align: center;
+}
+
+.js-programs {
+	background: linear-gradient(to bottom right, white, #F8F8F8);
+	max-width: 400px;
+	background: white;
+	margin: 0 auto;
+  box-shadow: 0 15px 20px -15px rgba(0, 0, 0, 0.3), 0 35px 50px -25px rgba(0, 0, 0, 0.3), 0 85px 60px -25px rgba(0, 0, 0, 0.1);
+}
+
+.js-programs-q {
+	border-bottom: 1px solid #DDE0E7;
+	color: #2a313a;
+	cursor: pointer;
+	font-weight: 700;
+	padding: 1.5rem;
+}
+
+.js-programs-q:hover {
+	background: #F6F7F9;
+}
+
+.js-programs-a {
+	display: none;
+	border-bottom: 1px solid #DDE0E7;
+	background: #F6F7F9;
+	padding: 1.5rem;
+	color: #4a5666;
+}
+
+.js-programs-q::before {
+	content: '';
+	vertical-align: middle;
+	display: inline-block;
+	width: .75rem;
+	height: .75rem;
+	border-radius: 50%;
+	background-color: #B1B5BE;
+	margin-right: .75rem;
+}
+
+.active.js-programs-q::before {
+	background-color: blue;
+}
+	</style>
+
+	<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.0/jquery.min.js"></script>
+</head>
+<body>
+<h1>Accordion Example Jquery</h1>
+
+<div class="js-programs">
+	<div class="js-programs-q">What is Lorem Ipsum?</div>
+	<div class="js-programs-a">Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod
+	tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam,
+	quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo
+	consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse
+	cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non
+	proident, sunt in culpa qui officia deserunt mollit anim id est laborum.</div>
+
+	<div class="js-programs-q">What is Lorem Ipsum?</div>
+	<div class="js-programs-a">Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod
+	tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam,
+	quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo
+	consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse
+	cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non
+	proident, sunt in culpa qui officia deserunt mollit anim id est laborum.</div>
+
+	<div class="js-programs-q">What is Lorem Ipsum?</div>
+	<div class="js-programs-a">Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod
+	tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam,
+	quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo
+	consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse
+	cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non
+	proident, sunt in culpa qui officia deserunt mollit anim id est laborum.</div>
+</div>
+	
+
+<script type="text/javascript">
+	
+$(document).ready(function(){
+
+	 $(".js-programs").on("click", ".js-programs-q", function() {
+
+ 	 $(this).toggleClass("active").next().slideToggle();
+ });
+
+});
+
+</script>
+</body>
+</html>
