@@ -1,1 +1,1 @@
-# javascript-development
+# Javascript Development
