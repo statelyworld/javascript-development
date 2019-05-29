@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <title>Learning the DOM</title>
+
+
+  </head>
+
+  <body>
+
+<!-- Write a JavaScript program to get the current date. 
+mm-dd-yyyy
+mm/dd/yyyy 
+or 
+dd-mm-yyyy,
+dd/mm/yyyy -->
+
+
+
+<script type="text/javascript">
+	
+var date=new Date();
+
+var mm=date.getMonth();	
+
+var dd=date.getDate();	
+
+var yyyy=date.getYear();	
+
+
+if(mm<10)
+{
+	mm="0"+mm;
+}
+
+if(dd<10)
+{
+	dd="0"+dd;
+}
+
+
+console.log(mm+"-"+dd+"-"+yyyy);
+console.log(mm+"/"+dd+"/"+yyyy);
+console.log(dd+"-"+mm+"-"+yyyy);
+console.log(dd+"/"+mm+"/"+yyyy);
+
+
+</script>
+
+
+
+
+  </body>
+</html
