@@ -1,0 +1,63 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>Multiplication Table</title>
+</head>
+<body>
+
+
+	<div><input type="number" name="" id="rows"><input type="number" name="" id="cols"><button onclick="createTable();">Print</button></div>
+
+	<div id="print_table">
+		
+	</div>
+
+
+
+<script type="text/javascript">
+	
+
+
+
+	function createTable()
+    {
+
+	var rows=document.getElementById("rows").value;//prompt("How many rows for your multiplication table?");
+	var cols=document.getElementById("cols").value;//prompt("How many columns for your multiplication table?");
+
+	if(cols== "" || cols== null)
+	{
+		cols = 10;
+		rows=10;
+	}
+
+	console.log("rows=" + rows);
+	console.log("cols=" + cols);
+
+    	var j=1;
+    	      var output = "<table border='1' width='500' cellspacing='0'cellpadding='5'>";
+    	      for(i=1;i<=rows;i++)
+    	      {
+    	    	output = output + "<tr>";
+    	        while(j<=cols)
+    	        {
+    	  		  output = output + "<td>" + i*j + "</td>";
+    	   		  j = j+1;
+    	   		}
+    	   		 output = output + "</tr>";
+    	   		 j = 1;
+    	    }
+    	    output = output + "</table>";
+    	   
+
+    	   document.getElementById("print_table").innerHTML=output;
+    }
+
+   
+</script>
+
+
+
+
+</body>
+</html>
